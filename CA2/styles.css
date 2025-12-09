@@ -1,0 +1,298 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== Layout Containers ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== Navbar (Common on All Pages) ===== */
+header {
+    background-color: #1f2933;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;               /* FLEXBOX for navbar layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu li a {
+    color: #e5e7eb;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+/* ===== Main & Footer ===== */
+main {
+    min-height: calc(100vh - 140px);
+    padding: 2rem 0 3rem;
+}
+
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.85rem;
+}
+
+/* ===== Home (index.html) ===== */
+.hero {
+    display: flex;               /* FLEXBOX for hero layout */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1 1 260px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.hero-text h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+.hero-text p {
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 0.6rem 1.3rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.hero-highlight {
+    flex: 1 1 240px;
+    background-color: #e0f2fe;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    border: 1px solid #bfdbfe;
+    font-size: 0.95rem;
+}
+
+/* ===== About Page (about.html) ===== */
+/* FLOAT used here for layout */
+.about-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* This is the FLOAT layout requirement */
+.profile-pic {
+    float: left;                      /* FLOAT used */
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 1.5rem 1rem 0;
+    border: 3px solid #3b82f6;
+}
+
+/* clearfix for floated image */
+.about-section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.about-section h1 {
+    margin-bottom: 0.8rem;
+    color: #111827;
+}
+
+.about-section p {
+    margin-bottom: 0.6rem;
+    color: #4b5563;
+}
+
+/* ===== Skills Page (skills.html) ===== */
+/* FLEXBOX used for cards */
+.skills-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.skills-section h1 {
+    margin-bottom: 0.8rem;
+    color: #111827;
+}
+
+.skills-section p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+.skills-grid {
+    display: flex;                /* FLEXBOX requirement */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.skill-card {
+    flex: 1 1 260px;
+    background-color: #eff6ff;    /* Background color */
+    border: 1px solid #93c5fd;    /* Border */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.skill-card h3 {
+    margin-bottom: 0.5rem;
+    color: #1d4ed8;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+/* ===== Contact Page (contact.html) ===== */
+.contact-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    max-width: 600px;
+}
+
+.contact-section h1 {
+    margin-bottom: 0.8rem;
+    color: #111827;
+}
+
+.contact-section p {
+    margin-bottom: 1.2rem;
+    color: #4b5563;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    display: inline-block;
+    background-color: #10b981;
+    color: #fff;
+    padding: 0.6rem 1.3rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #059669;
+}
+
+/* ===== Small Screens ===== */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem auto;
+    }
+}
+.hero-link a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.hero-link a:hover {
+    color: #000;
+}
